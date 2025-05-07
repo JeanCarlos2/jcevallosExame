@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jcevallosExame.Views.Registro"
+             Title="Registro">
+    <ScrollView>
+        <StackLayout Padding="25" Spacing="20">
+
+            <Label x:Name="lblUsuario"
+           FontSize="16"
+           TextColor="Gray"
+           HorizontalOptions="Center"/>
+
+            <Label Text="REGISTRO"
+           FontSize="22"
+           TextColor="Blue"
+           HorizontalOptions="Center"/>
+
+          
+            <Grid ColumnSpacing="10" RowSpacing="10"
+          RowDefinitions="Auto,Auto"
+          ColumnDefinitions="*,*,*">
+
+                <Label Text="Nombre" 
+                       Grid.Row="0"
+                       Grid.Column="0"/>
+                
+                <Label Text="Apellido" 
+                       Grid.Row="0" 
+                       Grid.Column="1"/>
+                <Label Text="Voltiamperio VA" 
+                       Grid.Row="0" 
+                       Grid.Column="2"/>
+
+                <Entry x:Name="entryNombre" 
+                       Grid.Row="1" 
+                       Grid.Column="0"/>
+                
+                <Entry x:Name="entryApellido" 
+                       Grid.Row="1" 
+                       Grid.Column="1"/>
+                
+                <Picker x:Name="pickerVA" 
+                        Grid.Row="1" 
+                        Grid.Column="2">
+                    <Picker.Items>
+                        <x:String>500</x:String>
+                        <x:String>750</x:String>
+                        <x:String>1000</x:String>
+                    </Picker.Items>
+                </Picker>
+            </Grid>
+
+       
+            <Grid ColumnSpacing="10" 
+                  RowSpacing="10"
+          RowDefinitions="Auto,Auto,Auto,Auto"
+          ColumnDefinitions="*,*">
+
+                <Label Text="Fecha" 
+                       Grid.Row="0" 
+                       Grid.Column="0"/>
+                <DatePicker x:Name="dateFecha" 
+                            Grid.Row="0" Grid.Column="1"/>
+
+                <Label Text="Ciudad" 
+                       Grid.Row="1" 
+                       Grid.Column="0"/>
+                
+                <Picker x:Name="pickerCiudad" 
+                        Grid.Row="1" 
+                        Grid.Column="1">
+                    <Picker.Items>
+                        <x:String>Quito</x:String>
+                        <x:String>Guayaquil</x:String>
+                        <x:String>Cuenca</x:String>
+                        <x:String>Ambato</x:String>
+                        <x:String>Manabi</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Label Text="Monto Inicial" 
+                       Grid.Row="2" 
+                       Grid.Column="0"/>
+          
+                <Entry x:Name="entryMontoInicial" 
+                       Grid.Row="2"
+                       Grid.Column="1" 
+                       Keyboard="Numeric"/>
+
+                <Button Text="Calcular Pago Mensual"
+                Grid.Row="3"
+                Grid.Column="0"
+                Clicked="OnCalcularClicked"/>
+
+                <Entry x:Name="entryPagoMensual" 
+                       Grid.Row="3" 
+                       Grid.Column="1"
+               IsReadOnly="True"
+               Placeholder="Cuota mensual"/>
+            </Grid>
+
+  
+            <Button Text="Ver Resumen"
+            Clicked="OnResumenClicked"
+            HorizontalOptions="Center"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

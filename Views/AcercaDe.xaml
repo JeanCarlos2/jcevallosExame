@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jcevallosExame.Views.AcercaDe"
+             Title="AcercaDe">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label x:Name="lblUsuario"
+     FontSize="16"
+     FontAttributes="Bold"
+     TextColor="DarkBlue"
+     HorizontalOptions="Center" />
+            <Label Text="Examen de Aplicaciones Móviles"
+             FontSize="20"
+             FontAttributes="Bold"
+             HorizontalOptions="Center" />
+            <Label Text="Estudiante: Jean Carlos Cevallos Loor"
+             FontSize="16" />
+            <Label Text="Materia: Aplicaciones Móviles"
+             FontSize="16" />
+            <Label Text="Curso: Octavo"
+             FontSize="16" />
+            <Label Text="Paralelo: A"
+             FontSize="16" />
+            <Label Text="Universidad: UIsrael"
+             FontSize="16" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

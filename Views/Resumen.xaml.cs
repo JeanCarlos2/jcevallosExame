@@ -11,7 +11,7 @@ public partial class Resumen : ContentPage
         lblNombre.Text = nombre;
         lblApellido.Text = apellido;
         lblVA.Text = va;
-        lblFecha.Text = fecha.ToString("dd/MM/yyyy"); // Formato bonito de fecha
+        lblFecha.Text = fecha.ToString("dd/MM/yyyy");
         lblCiudad.Text = ciudad;
         lblMontoInicial.Text = montoInicial.ToString("F2");
         lblPagoMensual.Text = cuotaMensual.ToString("F2");
@@ -20,7 +20,7 @@ public partial class Resumen : ContentPage
 
     private async void OnCerrarSesionClicked(object sender, EventArgs e)
     {
-        // Volver a la pantalla de login
+  
         await Navigation.PopToRootAsync();
     }
 }

@@ -7,7 +7,6 @@ public partial class Resumen : ContentPage
     {
         InitializeComponent();
 
-        // Asignamos los valores recibidos a los labels
         lblUsuario.Text = usuario;
         lblNombre.Text = nombre;
         lblApellido.Text = apellido;

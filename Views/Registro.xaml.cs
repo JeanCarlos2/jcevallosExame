@@ -19,13 +19,26 @@ public partial class Registro : ContentPage
 
     private void OnCalcularClicked(object sender, EventArgs e)
     {
-        // Calculamos automáticamente
+        if (pickerVA.SelectedIndex == -1)
+        {
+            DisplayAlert("Error", "Seleccione un Voltiamperio (VA) antes de calcular.", "OK");
+            return;
+        }
+
+        const double costoUPS = 300;
         double montoInicial = costoUPS * 0.15;
         double restante = costoUPS - montoInicial;
         double cuotaBase = restante / 3;
-        double cuotaConInteres = cuotaBase + (costoUPS * 0.05); // 5% adicional
+        double cuotaConInteres = cuotaBase + (costoUPS * 0.05);
 
-        entryPagoMensual.Text = cuotaConInteres.ToString("F2");
+        if (cuotaConInteres > 0)
+        {
+            entryPagoMensual.Text = cuotaConInteres.ToString("F2");
+        }
+        else
+        {
+            DisplayAlert("Error", "Error en el cálculo. Verifique los datos.", "OK");
+        }
     }
 
     private async void OnResumenClicked(object sender, EventArgs e)

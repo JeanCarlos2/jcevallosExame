@@ -29,7 +29,7 @@ public partial class Login : ContentPage
 
         if (usuarios.TryGetValue(usuario, out string valor) && valor == password)
         {
-            await Navigation.PushAsync(new Registro(usuario)); // Clase "Registro"
+            await Navigation.PushAsync(new Registro(usuario)); 
         }
         else
         {

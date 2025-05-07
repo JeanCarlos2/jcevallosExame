@@ -11,7 +11,6 @@ public partial class Registro : ContentPage
         usuario = usuarioConectado;
         lblUsuario.Text = $"Usuario conectado: {usuario}";
 
-        // Al cargar, ponemos automáticamente el monto inicial
         double montoInicial = costoUPS * 0.15;
         entryMontoInicial.Text = montoInicial.ToString("F2");
         entryMontoInicial.IsReadOnly = true;

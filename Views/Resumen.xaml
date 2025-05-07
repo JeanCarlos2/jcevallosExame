@@ -8,43 +8,34 @@
               RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto" 
               ColumnDefinitions="Auto, *">
 
-            <!-- Usuario Conectado -->
+     
             <Label Text="Usuario Conectado:" Grid.Row="0" Grid.Column="0" FontAttributes="Bold"/>
             <Label x:Name="lblUsuario" Grid.Row="0" Grid.Column="1" FontSize="20" TextColor="Blue"/>
 
-            <!-- Nombre -->
             <Label Text="Nombre:" Grid.Row="1" Grid.Column="0" FontAttributes="Bold"/>
             <Label x:Name="lblNombre" Grid.Row="1" Grid.Column="1"/>
 
-            <!-- Apellido -->
             <Label Text="Apellido:" Grid.Row="2" Grid.Column="0" FontAttributes="Bold"/>
             <Label x:Name="lblApellido" Grid.Row="2" Grid.Column="1"/>
 
-            <!-- VA -->
             <Label Text="VA:" Grid.Row="3" Grid.Column="0" FontAttributes="Bold"/>
             <Label x:Name="lblVA" Grid.Row="3" Grid.Column="1"/>
 
-            <!-- Fecha -->
             <Label Text="Fecha:" Grid.Row="4" Grid.Column="0" FontAttributes="Bold"/>
             <Label x:Name="lblFecha" Grid.Row="4" Grid.Column="1"/>
 
-            <!-- Ciudad -->
             <Label Text="Ciudad:" Grid.Row="5" Grid.Column="0" FontAttributes="Bold"/>
             <Label x:Name="lblCiudad" Grid.Row="5" Grid.Column="1"/>
 
-            <!-- Monto Inicial -->
             <Label Text="Monto Inicial:" Grid.Row="6" Grid.Column="0" FontAttributes="Bold"/>
             <Label x:Name="lblMontoInicial" Grid.Row="6" Grid.Column="1"/>
-
-            <!-- Cuota Mensual -->
+            
             <Label Text="Cuota Mensual:" Grid.Row="7" Grid.Column="0" FontAttributes="Bold"/>
             <Label x:Name="lblPagoMensual" Grid.Row="7" Grid.Column="1"/>
 
-            <!-- Pago Total -->
             <Label Text="Pago Total:" Grid.Row="8" Grid.Column="0" FontAttributes="Bold"/>
             <Label x:Name="lblPagoTotal" Grid.Row="8" Grid.Column="1"/>
 
-            <!-- Botón Cerrar sesión -->
             <Button Text="Cerrar sesión"
                     BackgroundColor="Red"
                     TextColor="White"

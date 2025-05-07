@@ -43,7 +43,7 @@ public partial class Registro : ContentPage
 
     private async void OnResumenClicked(object sender, EventArgs e)
     {
-        // Validaciones básicas
+        
         if (string.IsNullOrWhiteSpace(entryNombre.Text) ||
             string.IsNullOrWhiteSpace(entryApellido.Text) ||
             pickerVA.SelectedIndex == -1 ||
@@ -54,7 +54,6 @@ public partial class Registro : ContentPage
             return;
         }
 
-        // Recolectar datos
         string nombre = entryNombre.Text;
         string apellido = entryApellido.Text;
         string va = pickerVA.SelectedItem.ToString();
@@ -64,7 +63,6 @@ public partial class Registro : ContentPage
         double cuotaMensual = double.Parse(entryPagoMensual.Text);
         double pagoTotal = montoInicial + (cuotaMensual * 3);
 
-        // Navegar a Resumen
         await Navigation.PushAsync(new Resumen(
             usuario, nombre, apellido, va,
             fecha, ciudad, montoInicial, cuotaMensual, pagoTotal

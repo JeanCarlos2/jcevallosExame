@@ -72,8 +72,6 @@
                         Grid.Column="1">
                     <Picker.Items>
                         <x:String>Quito</x:String>
-                        <x:String>Guayaquil</x:String>
-                        <x:String>Cuenca</x:String>
                         <x:String>Ambato</x:String>
                         <x:String>Manabi</x:String>
                     </Picker.Items>
